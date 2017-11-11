@@ -59,6 +59,40 @@ public class Main {
             System.out.println("Módulo BC: " + triangulo.moduloBC());
             System.out.println("Módulo AC: " + triangulo.moduloAC());
         }
+        
+        
+        if (opcion == 2) {
+            System.out.print("Ingrese coordenadas para A: ");
+            String coordA = input.nextLine();
+            String[] splitA = coordA.split(",");
+            int aX = Integer.parseInt(splitA[0]);
+            int aY = Integer.parseInt(splitA[1]);
+
+            System.out.print("Ingrese coordenadas para B: ");
+            String coordB = input.nextLine();
+            String[] splitB = coordB.split(",");
+            int bX = Integer.parseInt(splitB[0]);
+            int bY = Integer.parseInt(splitB[1]);
+
+            System.out.print("Ingrese coordenadas para C: ");
+            String coordC = input.nextLine();
+            String[] splitC = coordC.split(",");
+            int cX = Integer.parseInt(splitC[0]);
+            int cY = Integer.parseInt(splitC[1]);
+            
+            System.out.print("Ingrese coordenadas para D: ");
+            String coordD = input.nextLine();
+            String[] splitD = coordD.split(",");
+            int dX = Integer.parseInt(splitD[0]);
+            int dY = Integer.parseInt(splitD[1]);
+            
+           cuatroPuntos cuadrilatero = new cuatroPuntos(aX, aY, bX, bY, cX, cY, dX, dY);
+           
+           System.out.println("Módulo AB: " + cuadrilatero.moduloAB());
+           System.out.println("Módulo BC: " + cuadrilatero.moduloBC());
+           System.out.println("Módulo CD: " + cuadrilatero.moduloCD());
+           System.out.println("Módulo DA: " + cuadrilatero.moduloDA());
+        }
     }
 }
 
