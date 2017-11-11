@@ -14,10 +14,10 @@ public class Main {
     public static void main(String[] args) {
 
         
-        intento ventana = new intento();
-        
-        ventana.setTitle("calculo de areas y perimetros");
-        ventana.setVisible(true);
+//        Ingreso_puntos ventana = new Ingreso_puntos();
+//        
+//        ventana.setTitle("calculo de areas y perimetros");
+//        ventana.setVisible(true);
         
         List<Figura> figuras = new ArrayList<Figura>();
 
