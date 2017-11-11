@@ -32,7 +32,7 @@ public class tresPuntos implements Figura {
     public double getBX() {
         return b.getX();
     }
-    
+
     public double getBY() {
         return b.getY();
     }
@@ -40,8 +40,32 @@ public class tresPuntos implements Figura {
     public double getCX() {
         return c.getX();
     }
-    
+
     public double getCY() {
         return c.getY();
-    } 
+    }
+
+    public double moduloAB() {
+        double powX = Math.pow((getBX() - getAX()), 2);
+        double powY = Math.pow((getBY() - getAY()), 2);
+        double modulo;
+
+        return modulo = Math.sqrt((powX + powY));
+    }
+
+    public double moduloBC() {
+        double powX = Math.pow((getCX() - getBX()), 2);
+        double powY = Math.pow((getCY() - getBY()), 2);
+        double modulo;
+
+        return modulo = Math.sqrt((powX + powY));
+    }
+
+    public double moduloAC() {
+        double powX = Math.pow((getCX() - getAX()), 2);
+        double powY = Math.pow((getCY() - getAY()), 2);
+        double modulo;
+
+        return modulo = Math.sqrt((powX + powY));
+    }
 }

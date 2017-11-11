@@ -2,7 +2,7 @@ package modelo;
 
 /**
  *
- * @author Juan Catrileo / Sergio Herrera / Javier Vergara
+ * @author ZDK
  */
 public interface Figura {
     
