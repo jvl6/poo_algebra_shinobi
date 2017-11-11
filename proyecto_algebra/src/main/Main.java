@@ -1,3 +1,4 @@
+
 package main;
 
 import java.util.ArrayList;
@@ -60,3 +61,38 @@ public class Main {
         }
     }
 }
+
+
+        /*
+
+        String opcion;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("opciones de bases");
+        System.out.println("ingrese su opcion");
+        System.out.println("A.- AB");
+        System.out.println("B.- AC");
+        System.out.println("C.- BC");
+        opcion = scan.nextLine();
+        
+        if (opcion == "A"){
+            int h = 0;
+            int Area = 0;
+            System.out.println("ingrese la altura");
+            h = scan.nextInt();
+            Area = h + 0 / 2; 
+            // el 0 es el metodo que falta debe ser reemplazado despues para ver cual es la base
+        }
+        else if (opcion == "B") {
+            int h = 0;
+            int Area = 0;
+            System.out.println("ingrese la altura");
+            h = scan.nextInt();
+            Area = h + 0 / 2 ; 
+            // el 0 debe ser reemplazado
+        } else if (opcion == "C") {
+            int h = 0;
+            int Area = 0;
+            System.out.println("ingrese altura");
+            h = scan.nextInt();
+            Area = h + 0 / 2;
+           //reeplazar 0 segun la que sea la base */
