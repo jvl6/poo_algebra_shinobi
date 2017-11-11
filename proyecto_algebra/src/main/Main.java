@@ -12,6 +12,7 @@ import modelo.*;
 public class Main {
 
     public static void main(String[] args) {
+
         
         intento ventana = new intento();
         
@@ -19,6 +20,9 @@ public class Main {
         ventana.setVisible(true);
         
         List<Figura> figuras = new ArrayList<Figura>();
+
+//        List<Figura> figuras = new ArrayList<>();
+
         Scanner input = new Scanner(System.in);
 
         System.out.println("Cantidad de puntos a ingresar: ");
@@ -46,9 +50,13 @@ public class Main {
             int cX = Integer.parseInt(splitC[0]);
             int cY = Integer.parseInt(splitC[1]);
 
-            tresPuntos tri = new tresPuntos(aX, aY, bX, bY, cX, cY);
+            tresPuntos triangulo = new tresPuntos(aX, aY, bX, bY, cX, cY);
 
-            figuras.add(tri);
+            figuras.add(triangulo);
+            
+            System.out.println("Módulo AB: " + triangulo.moduloAB());
+            System.out.println("Módulo BC: " + triangulo.moduloBC());
+            System.out.println("Módulo AC: " + triangulo.moduloAC());
         }
     }
 }
