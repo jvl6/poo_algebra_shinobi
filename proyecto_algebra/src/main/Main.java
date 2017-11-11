@@ -1,21 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package main;
+
+import java.util.Scanner;
 
 /**
  *
- * @author ZDK
+ * Javier Vergara / Sergio Herrera / Juan Catrileo
  */
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+               Scanner scan = new Scanner (System.in);
+       double n1 ,n2 , resultado , resultado2;
+        System.out.println("ingrese el numero 1:");
+        n1=scan.nextDouble();
+        System.out.println("ingrese el numero 2:");
+        n2=scan.nextDouble();
+        resultado = Math.sqrt(n1);
+        resultado2 = Math.sqrt(n2);
+        System.out.println("la raiz de n1 y  es:" + resultado + "el resultado de n2 es" +resultado2);
+
     }
     
 }
