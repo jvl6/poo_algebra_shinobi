@@ -74,12 +74,21 @@ public class cuatroPuntos {
     
     public String getTipo(){
         if(moduloAB() == moduloCD() && moduloBC() == moduloDA()){
-            this.tipo = "Cuadrado o Rombo";
-            //falta verificar las coord
-        }else if(moduloAB() == moduloCD() || moduloBC() == moduloDA()){
-            this.tipo = "Rectancgulo o Romboide";
+            if(getAX() == getCX() && getAY() == getCY()){
+                this.tipo = "Cuadrado";
+            }else{
+                this.tipo = "Rombo";
+            }
+        }else if((moduloAB() == moduloCD()) && (moduloAB() != moduloBC()) && (moduloBC() == moduloDA())){
+            if(getAX() == getCX() && getAY() == getCY()){
+                this.tipo = "rectangulo";
+            }else{
+                this.tipo = "Romboide";
+            }
         }else if(moduloAB() == moduloCD() && moduloBC() != moduloDA()){
-            this.tipo = "Trapecio o Trapesoide";
+            this.tipo = "Trapecio";
+        }else{
+            this.tipo = "Trapesoide";
         }
         
         return this.tipo;
