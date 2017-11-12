@@ -98,7 +98,7 @@ public class Main {
             System.out.println("Módulo BC: " + cuadrilatero.moduloBC());
             System.out.println("Módulo CD: " + cuadrilatero.moduloCD());
             System.out.println("Módulo DA: " + cuadrilatero.moduloDA());
-<<<<<<< HEAD
+
                     /* esta es el area del trapesoide
         
         int SemiArea=0;
@@ -121,11 +121,9 @@ public class Main {
         System.out.println("el area es:");
         area = lado1 * lado2;
         */
-
-=======
             
             System.out.println("Tipo: " + cuadrilatero.getTipo());
->>>>>>> eb9713e8f4d4abfa677be0d991f1dffadfa6fd7e
+
         }
     }
 }
