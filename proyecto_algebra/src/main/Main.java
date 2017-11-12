@@ -15,7 +15,7 @@ public class Main {
 //        
 //        ventana.setTitle("calculo de areas y perimetros");
 //        ventana.setVisible(true);
-
+    while(true){
         Scanner input = new Scanner(System.in);
 
         System.out.println("Cantidad de puntos a ingresar: ");
@@ -98,6 +98,8 @@ public class Main {
             System.out.println("Módulo BC: " + cuadrilatero.moduloBC());
             System.out.println("Módulo CD: " + cuadrilatero.moduloCD());
             System.out.println("Módulo DA: " + cuadrilatero.moduloDA());
+            
+            System.out.println("Tipo: " + cuadrilatero.getTipo());
 
                     /* esta es el area del trapesoide
         
@@ -121,9 +123,17 @@ public class Main {
         System.out.println("el area es:");
         area = lado1 * lado2;
         */
+        
+        
             
-            System.out.println("Tipo: " + cuadrilatero.getTipo());
-
+        }
+        System.out.print("Desea continuar [1.si / 2.no]: "); 
+        
+        int opc = Integer.parseInt(input.nextLine());
+        
+        if(opc == 2){
+            break;
+        }
         }
     }
 }
