@@ -12,7 +12,6 @@ public class tresPuntos {
     private Point b;
     private Point c;
     private String tipo;
-    public int c_triangulo = 0;
 
     public tresPuntos() {
     }
@@ -80,11 +79,10 @@ public class tresPuntos {
         if(moduloAB() == moduloBC() && moduloBC() == moduloAC()) {
             this.tipo = "Triángulo Equilátero.";
         } else if(moduloAB() == moduloBC() || moduloBC() == moduloAC()){
-            this.tipo = "Triángulo Isósceles";
+            this.tipo = "Triángulo Isósceles.";
         } else {
             this.tipo = "Triángulo Escaleno.";
         }
-        c_triangulo += 1;
         return this.tipo;
     }
 }

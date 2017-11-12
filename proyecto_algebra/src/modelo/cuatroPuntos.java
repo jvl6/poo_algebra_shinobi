@@ -9,13 +9,12 @@ public class cuatroPuntos {
     private Point c;
     private Point d;
     private String tipo;
-    private int c_cuadrado =0;
-    private int c_rombo =0;
-    private int c_rectangulo =0;
-    private int c_romboide =0;
-    private int c_trapecio =0;
-    private int c_trapesoide =0;
-    
+    private int c_cuadrado = 0;
+    private int c_rombo = 0;
+    private int c_rectangulo = 0;
+    private int c_romboide = 0;
+    private int c_trapecio = 0;
+    private int c_trapezoide = 0;
 
     public cuatroPuntos() {
     }
@@ -78,33 +77,33 @@ public class cuatroPuntos {
         return Math.sqrt(((Math.pow((getAX() - getDX()), 2))
                 + (Math.pow((getAY() - getDY()), 2))));
     }
-    
-    public String getTipo(){
-        if(moduloAB() == moduloCD() && moduloBC() == moduloDA()){
-            if(getAX() == getCX() && getAY() == getCY()){
+
+    public String getTipo() {
+        if (moduloAB() == moduloCD() && moduloBC() == moduloDA()) {
+            if (getAX() == getCX() && getAY() == getCY()) {
                 this.tipo = "Cuadrado";
                 c_cuadrado += 1;
-            }else{
+            } else {
                 this.tipo = "Rombo";
                 c_rombo += 1;
             }
-        }else if((moduloAB() == moduloCD()) && (moduloAB() != moduloBC()) && (moduloBC() == moduloDA())){
-            if(getAX() == getCX() && getAY() == getCY()){
+        } else if ((moduloAB() == moduloCD()) && (moduloAB() != moduloBC()) && (moduloBC() == moduloDA())) {
+            if (getAX() == getCX() && getAY() == getCY()) {
                 this.tipo = "rectangulo";
                 c_rectangulo += 1;
-            }else{
+            } else {
                 this.tipo = "Romboide";
                 c_romboide += 1;
             }
-        }else if(moduloAB() == moduloCD() && moduloBC() != moduloDA()){
+        } else if (moduloAB() == moduloCD() && moduloBC() != moduloDA()) {
             this.tipo = "Trapecio";
             c_trapecio += 1;
-        }else{
-            this.tipo = "Trapesoide";
-            c_trapesoide += 1;
+        } else {
+            this.tipo = "Trapezoide";
+            c_trapezoide += 1;
         }
-        
+
         return this.tipo;
-        
+
     }
 }

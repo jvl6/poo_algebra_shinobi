@@ -16,6 +16,18 @@ public class Main {
 //        ventana.setTitle("calculo de areas y perimetros");
 //        ventana.setVisible(true);
         int cantFiguras = 0;
+        int c_triangulo = 0;
+        int c_equilatero = 0;
+        int c_isosceles = 0;
+        int c_escaleno = 0;
+
+        int c_cuadrilateros = 0;
+        int c_cuadrado = 0;
+        int c_rombo = 0;
+        int c_rectangulo = 0;
+        int c_romboide = 0;
+        int c_trapecio = 0;
+        int c_trapezoide = 0;
 
         Scanner input = new Scanner(System.in);
 
@@ -67,6 +79,20 @@ public class Main {
                 System.out.println("Área: " + triangulo.getArea(opcion, h));
 
                 System.out.println("Tipo: " + triangulo.getTipo());
+                
+                switch (triangulo.getTipo()) {
+                    case "Triángulo Equilátero.":
+                        c_equilatero++;
+                        break;
+                    case "Triángulo Isósceles.":
+                        c_isosceles++;
+                        break;
+                    case "Triángulo Escaleno.":
+                        c_escaleno++;
+                        break;
+                    default:
+                        break;
+                }
             }
 
             if (opcion == 2) {
@@ -95,6 +121,8 @@ public class Main {
                 int dY = Integer.parseInt(splitD[1]);
 
                 cuatroPuntos cuadrilatero = new cuatroPuntos(aX, aY, bX, bY, cX, cY, dX, dY);
+                
+                c_cuadrilateros++;
 
                 System.out.println("Módulo AB: " + cuadrilatero.moduloAB());
                 System.out.println("Módulo BC: " + cuadrilatero.moduloBC());
@@ -102,7 +130,27 @@ public class Main {
                 System.out.println("Módulo DA: " + cuadrilatero.moduloDA());
 
                 System.out.println("Tipo: " + cuadrilatero.getTipo());
-
+                
+                switch(cuadrilatero.getTipo()) {
+                    case "Cuadrado":
+                        c_cuadrado++;
+                        break;
+                    case "Rombo":
+                        c_rombo++;
+                        break;
+                    case "rectangulo":
+                        c_rectangulo++;
+                        break;
+                    case "Romboide":
+                        c_romboide++;
+                        break;
+                    case "Trapecio":
+                        c_trapecio++;
+                        break;
+                    case "Trapezoide":
+                        c_trapezoide++;
+                        break;
+                }
                 /* esta es el area del trapesoide
         
         int SemiArea=0;
@@ -130,8 +178,20 @@ public class Main {
             int opc = Integer.parseInt(input.nextLine());
 
             if (opc == 2) {
-                System.out.println("Cantidad de figuras ingresadas: "
-                        + cantFiguras);
+                System.out.println("Figuras ingresadas:");
+                System.out.println("Total: " + cantFiguras);
+                System.out.println("Total Triángulos: " + c_triangulo);
+                System.out.println("Equiláteros: " + c_equilatero);
+                System.out.println("Isósceles: " + c_isosceles);
+                System.out.println("Escalenos: " + c_escaleno + "\n");
+                
+                System.out.println("Total Cuadriláteros: " + c_cuadrilateros);
+                System.out.println("Cuadrados: " + c_cuadrado);
+                System.out.println("Rombos: " + c_rombo);
+                System.out.println("Rectángulos: " + c_rectangulo);
+                System.out.println("Romboides: " + c_romboide);
+                System.out.println("Trapecios: " + c_trapecio);
+                System.out.println("Trapezoides: " + c_trapezoide);
                 break;
             }
         }
