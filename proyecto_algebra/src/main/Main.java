@@ -151,16 +151,19 @@ public class Main {
                         c_trapezoide++;
                         break;
                 }
-                /* esta es el area del trapesoide
+               /* esta es el area del trapesoide
         
         int SemiArea=0;
         int h=0;// usuario define altura
         int bMayor=0;//cambiar por las bases correspondientes base Mayor
         int bMenor=0;//cambiar por las bases correspondientes base Menor
         int area=0;
+        int lado1=0
+        int lado2=0
         System.out.println("area de trapecio");
         SemiArea = ((bMayor + bMenor)/2 * (h))  ;
         area = SemiArea + (h * 2) ;
+        perimetro = bMayor + bMenor + lado1 + lado2
         System.out.println("el area es:" + area);
         ========================================================================
                  */
@@ -169,9 +172,13 @@ public class Main {
         int area=0;
         int lado1=0; // se reemplaza por uno de los lados
         int lado2=0;// se reemplazar por otro lado distinto
+        int lado3=0;
+        int lado4=0;
         System.out.println("el area es:");
         area = lado1 * lado2;
+        perimetro= lado1 + lado2 + lado3 + lado4;
                  */
+
             }
             System.out.print("Desea continuar [1.si / 2.no]: ");
 
