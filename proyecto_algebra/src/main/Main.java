@@ -46,9 +46,17 @@ public class Main {
 
             tresPuntos triangulo = new tresPuntos(aX, aY, bX, bY, cX, cY);
 
-            System.out.println("Módulo AB: " + triangulo.moduloAB());
-            System.out.println("Módulo BC: " + triangulo.moduloBC());
-            System.out.println("Módulo CD: " + triangulo.moduloAC());
+            System.out.println("Seleccione la base: ");
+            System.out.println("1. AB");
+            System.out.println("2. BC");
+            System.out.println("3. AC");
+            System.out.print("Opción: ");
+            opcion = Integer.parseInt(input.nextLine());
+
+            System.out.print("Ingrese la altura (con un .): ");
+            double h = Double.parseDouble(input.nextLine());
+
+            System.out.println("Área: " + triangulo.getArea(opcion, h));
         }
 
         if (opcion == 2) {

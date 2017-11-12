@@ -59,4 +59,18 @@ public class tresPuntos {
         return Math.sqrt(((Math.pow((getCX() - getAX()), 2))
                 + (Math.pow((getCY() - getAY()), 2))));
     }
+    
+    public double getArea(int opcion, double h) {
+        double modulo = 0;
+        
+        if (opcion == 1) {
+            modulo = moduloAB();
+        } else if (opcion == 2){
+            modulo = moduloBC();
+        } else if (opcion == 3) {
+            modulo = moduloAC();
+        }
+        
+        return h + modulo / 2;
+    }
 }
