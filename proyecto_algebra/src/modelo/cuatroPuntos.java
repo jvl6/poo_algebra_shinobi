@@ -8,6 +8,7 @@ public class cuatroPuntos {
     private Point b;
     private Point c;
     private Point d;
+    private String tipo;
 
     public cuatroPuntos() {
     }
@@ -69,5 +70,19 @@ public class cuatroPuntos {
     public double moduloDA() {
         return Math.sqrt(((Math.pow((getAX() - getDX()), 2))
                 + (Math.pow((getAY() - getDY()), 2))));
+    }
+    
+    public String getTipo(){
+        if(moduloAB() == moduloCD() && moduloBC() == moduloDA()){
+            this.tipo = "Cuadrado o Rombo";
+            //falta verificar las coord
+        }else if(moduloAB() == moduloCD() || moduloBC() == moduloDA()){
+            this.tipo = "Rectancgulo o Romboide";
+        }else if(moduloAB() == moduloCD() && moduloBC() != moduloDA()){
+            this.tipo = "Trapecio o Trapesoide";
+        }
+        
+        return this.tipo;
+        
     }
 }
