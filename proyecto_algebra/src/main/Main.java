@@ -59,8 +59,9 @@ public class Main {
             System.out.print("Opción: ");
             opcion = Integer.parseInt(input.nextLine());
 
-            System.out.print("Ingrese la altura (con un .): ");
-            double h = Double.parseDouble(input.nextLine());
+            System.out.print("Ingrese la altura: ");
+            String altura = input.nextLine().replaceAll(",", ".");
+            double h = Double.parseDouble(altura);
 
             System.out.println("Área: " + triangulo.getArea(opcion, h));
         }
