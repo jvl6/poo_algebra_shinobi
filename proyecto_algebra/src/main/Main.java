@@ -97,6 +97,29 @@ public class Main {
             System.out.println("Módulo BC: " + cuadrilatero.moduloBC());
             System.out.println("Módulo CD: " + cuadrilatero.moduloCD());
             System.out.println("Módulo DA: " + cuadrilatero.moduloDA());
+                    /* esta es el area del trapesoide
+        
+        int SemiArea=0;
+        int h=0;// usuario define altura
+        int bMayor=0;//cambiar por las bases correspondientes base Mayor
+        int bMenor=0;//cambiar por las bases correspondientes base Menor
+        int area=0;
+        System.out.println("area de trapecio");
+        SemiArea = ((bMayor + bMenor)/2 * (h))  ;
+        area = SemiArea + (h * 2) ;
+        System.out.println("el area es:" + area);
+        ========================================================================
+            */
+        
+        // area de las figuras de cuatro lados por lo menos con un lado paralelo
+        /*
+        int area=0;
+        int lado1=0; // se reemplaza por uno de los lados
+        int lado2=0;// se reemplazar por otro lado distinto
+        System.out.println("el area es:");
+        area = lado1 * lado2;
+        */
+
         }
     }
 }
