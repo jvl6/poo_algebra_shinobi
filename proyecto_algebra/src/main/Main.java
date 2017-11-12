@@ -1,4 +1,3 @@
-
 package main;
 
 import java.util.ArrayList;
@@ -14,16 +13,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        
 //        Ingreso_puntos ventana = new Ingreso_puntos();
 //        
 //        ventana.setTitle("calculo de areas y perimetros");
 //        ventana.setVisible(true);
-        
-        List<Figura> figuras = new ArrayList<Figura>();
-
-//        List<Figura> figuras = new ArrayList<>();
-
         Scanner input = new Scanner(System.in);
 
         System.out.println("Cantidad de puntos a ingresar: ");
@@ -53,14 +46,11 @@ public class Main {
 
             tresPuntos triangulo = new tresPuntos(aX, aY, bX, bY, cX, cY);
 
-            figuras.add(triangulo);
-            
             System.out.println("Módulo AB: " + triangulo.moduloAB());
             System.out.println("Módulo BC: " + triangulo.moduloBC());
-            System.out.println("Módulo AC: " + triangulo.moduloAC());
+            System.out.println("Módulo CD: " + triangulo.moduloAC());
         }
-        
-        
+
         if (opcion == 2) {
             System.out.print("Ingrese coordenadas para A: ");
             String coordA = input.nextLine();
@@ -79,25 +69,25 @@ public class Main {
             String[] splitC = coordC.split(",");
             int cX = Integer.parseInt(splitC[0]);
             int cY = Integer.parseInt(splitC[1]);
-            
+
             System.out.print("Ingrese coordenadas para D: ");
             String coordD = input.nextLine();
             String[] splitD = coordD.split(",");
             int dX = Integer.parseInt(splitD[0]);
             int dY = Integer.parseInt(splitD[1]);
-            
-           cuatroPuntos cuadrilatero = new cuatroPuntos(aX, aY, bX, bY, cX, cY, dX, dY);
-           
-           System.out.println("Módulo AB: " + cuadrilatero.moduloAB());
-           System.out.println("Módulo BC: " + cuadrilatero.moduloBC());
-           System.out.println("Módulo CD: " + cuadrilatero.moduloCD());
-           System.out.println("Módulo DA: " + cuadrilatero.moduloDA());
+
+            cuatroPuntos cuadrilatero = new cuatroPuntos(aX, aY, bX, bY, cX, cY, dX, dY);
+
+            System.out.println("Módulo AB: " + cuadrilatero.moduloAB());
+            System.out.println("Módulo BC: " + cuadrilatero.moduloBC());
+            System.out.println("Módulo CD: " + cuadrilatero.moduloCD());
+            System.out.println("Módulo DA: " + cuadrilatero.moduloDA());
         }
     }
 }
 
 
-        /*
+/*
 
         String opcion;
         Scanner scan = new Scanner(System.in);

@@ -6,7 +6,7 @@ import java.awt.Point;
  *
  * @author Juan Catrileo / Sergio Herrera / Javier Vergara
  */
-public class tresPuntos implements Figura {
+public class tresPuntos {
 
     private Point a;
     private Point b;
@@ -46,26 +46,17 @@ public class tresPuntos implements Figura {
     }
 
     public double moduloAB() {
-        double powX = Math.pow((getBX() - getAX()), 2);
-        double powY = Math.pow((getBY() - getAY()), 2);
-        double modulo;
-
-        return modulo = Math.sqrt((powX + powY));
+        return Math.sqrt(((Math.pow((getBX() - getAX()), 2))
+                + (Math.pow((getBY() - getAY()), 2))));
     }
 
     public double moduloBC() {
-        double powX = Math.pow((getCX() - getBX()), 2);
-        double powY = Math.pow((getCY() - getBY()), 2);
-        double modulo;
-
-        return modulo = Math.sqrt((powX + powY));
+        return Math.sqrt(((Math.pow((getCX() - getBX()), 2))
+                + (Math.pow((getCY() - getBY()), 2))));
     }
 
     public double moduloAC() {
-        double powX = Math.pow((getCX() - getAX()), 2);
-        double powY = Math.pow((getCY() - getAY()), 2);
-        double modulo;
-
-        return modulo = Math.sqrt((powX + powY));
+        return Math.sqrt(((Math.pow((getCX() - getAX()), 2))
+                + (Math.pow((getCY() - getAY()), 2))));
     }
 }
