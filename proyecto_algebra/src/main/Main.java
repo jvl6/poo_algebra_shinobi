@@ -1,7 +1,5 @@
 package main;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 import modelo.*;
 
@@ -17,6 +15,7 @@ public class Main {
 //        
 //        ventana.setTitle("calculo de areas y perimetros");
 //        ventana.setVisible(true);
+
         Scanner input = new Scanner(System.in);
 
         System.out.println("Cantidad de puntos a ingresar: ");
@@ -50,7 +49,7 @@ public class Main {
             System.out.println("Módulo BC: " + triangulo.moduloBC());
             System.out.println("Módulo AC: " + triangulo.moduloAC());
             
-            System.out.println("Tipo: " + triangulo.getTipo());
+            
 
             System.out.println("Seleccione la base: ");
             System.out.println("1. AB");
@@ -64,6 +63,8 @@ public class Main {
             double h = Double.parseDouble(altura);
 
             System.out.println("Área: " + triangulo.getArea(opcion, h));
+            
+            System.out.println("Tipo: " + triangulo.getTipo());
         }
 
         if (opcion == 2) {
@@ -97,6 +98,7 @@ public class Main {
             System.out.println("Módulo BC: " + cuadrilatero.moduloBC());
             System.out.println("Módulo CD: " + cuadrilatero.moduloCD());
             System.out.println("Módulo DA: " + cuadrilatero.moduloDA());
+<<<<<<< HEAD
                     /* esta es el area del trapesoide
         
         int SemiArea=0;
@@ -120,6 +122,10 @@ public class Main {
         area = lado1 * lado2;
         */
 
+=======
+            
+            System.out.println("Tipo: " + cuadrilatero.getTipo());
+>>>>>>> eb9713e8f4d4abfa677be0d991f1dffadfa6fd7e
         }
     }
 }
