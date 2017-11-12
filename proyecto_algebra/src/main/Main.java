@@ -45,6 +45,12 @@ public class Main {
             int cY = Integer.parseInt(splitC[1]);
 
             tresPuntos triangulo = new tresPuntos(aX, aY, bX, bY, cX, cY);
+            
+            System.out.println("Módulo AB: " + triangulo.moduloAB());
+            System.out.println("Módulo BC: " + triangulo.moduloBC());
+            System.out.println("Módulo AC: " + triangulo.moduloAC());
+            
+            System.out.println("Tipo: " + triangulo.getTipo());
 
             System.out.println("Seleccione la base: ");
             System.out.println("1. AB");
