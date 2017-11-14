@@ -2,17 +2,16 @@ package modelo;
 
 import java.awt.Point;
 
-public class Trapecio {
-    
+public class trapezoide {
     private Point a;
     private Point b;
     private Point c;
     private Point d;
     private String Trapecio;
     
-    public Trapecio(){
+    public trapezoide(){
     }
-     public Trapecio(int a, int b, int c, int d, int e, int f, int g, int h) {
+     public trapezoide(int a, int b, int c, int d, int e, int f, int g, int h) {
         this.a = new Point(a, b);
         this.b = new Point(c, d);
         this.c = new Point(e, f);
@@ -75,4 +74,5 @@ public class Trapecio {
     }
     
    
+}
 }
