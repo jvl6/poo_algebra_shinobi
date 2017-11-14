@@ -8,7 +8,6 @@ public class Trapecio {
     private Point b;
     private Point c;
     private Point d;
-    private Point e;
     private String Trapecio;
     
     public Trapecio(){
@@ -50,5 +49,28 @@ public class Trapecio {
 
     public double getDY() {
         return d.getY();
+    }
+    
+    public void setArea(){
+        
+    }
+     public double moduloAB() {
+        return Math.sqrt(((Math.pow((getBX() - getAX()), 2))
+                + (Math.pow((getBY() - getAY()), 2))));
+    }
+
+    public double moduloBC() {
+        return Math.sqrt(((Math.pow((getCX() - getBX()), 2))
+                + (Math.pow((getCY() - getBY()), 2))));
+    }
+
+    public double moduloCD() {
+        return Math.sqrt(((Math.pow((getDX() - getCX()), 2))
+                + (Math.pow((getDY() - getCY()), 2))));
+    }
+
+    public double moduloDA() {
+        return Math.sqrt(((Math.pow((getAX() - getDX()), 2))
+                + (Math.pow((getAY() - getDY()), 2))));
     }
 }
