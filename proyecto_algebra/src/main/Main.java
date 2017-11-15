@@ -29,18 +29,30 @@ public class Main {
         int c_trapecio = 0;
         int c_trapezoide = 0;
 
+        System.out.println(" ******************************************** ");
+        System.out.println("*      CALCULADORA DE ÁREA Y PERÍMETRO       *");
+        System.out.println("**********************************************");
+        System.out.println("|Seleccione la cantidad de puntos a ingresar |");
+        System.out.println("|siguiendo las instrucciones en pantalla.    |");
+        System.out.println("|Ingrese los puntos con una coma.            |");
+        System.out.println("|EJ: 3,6                                     |");
+        System.out.println(" - - - - - - - - - - - - - - - - - - - - - - ");
+
         Scanner input = new Scanner(System.in);
 
         while (true) {
             cantFiguras++;
 
-            System.out.println("Cantidad de puntos a ingresar: ");
+            System.out.println("\nCantidad de puntos a ingresar: ");
             System.out.println("1. Tres.");
             System.out.println("2. Cuatro.");
             System.out.print("Opción: ");
             int opcion = Integer.parseInt(input.nextLine());
 
             if (opcion == 1) {
+                System.out.println("\n======================");
+                System.out.println("INGRESO DE COORDENADAS");
+                System.out.println("======================");
                 System.out.print("Ingrese coordenadas para A: ");
                 String coordA = input.nextLine();
                 String[] splitA = coordA.split(",");
@@ -60,26 +72,33 @@ public class Main {
                 int cY = Integer.parseInt(splitC[1]);
 
                 tresPuntos triangulo = new tresPuntos(aX, aY, bX, bY, cX, cY);
+                System.out.println("\nFigura ingresada: " + triangulo.getTipo());
 
+                System.out.println("\n======================");
+                System.out.println("MÓDULO DE LOS VECTORES");
+                System.out.println("======================");
                 System.out.println("Módulo AB: " + triangulo.moduloAB());
                 System.out.println("Módulo BC: " + triangulo.moduloBC());
                 System.out.println("Módulo AC: " + triangulo.moduloAC());
 
-                System.out.println("Seleccione la base: ");
-                System.out.println("1. AB");
-                System.out.println("2. BC");
-                System.out.println("3. AC");
+                System.out.println("\n====================");
+                System.out.println("SELECCIÓN DE LA BASE");
+                System.out.println("====================");
+                System.out.println("1. Desde A hasta B (AB)");
+                System.out.println("2. Desde B hasta C (BC)");
+                System.out.println("3. Desde A hasta C (AC)");
                 System.out.print("Opción: ");
                 opcion = Integer.parseInt(input.nextLine());
 
+                System.out.println("\n======");
+                System.out.println("ALTURA");
+                System.out.println("======");
                 System.out.print("Ingrese la altura: ");
                 String altura = input.nextLine().replaceAll(",", ".");
                 double h = Double.parseDouble(altura);
 
                 System.out.println("Área: " + triangulo.getArea(opcion, h));
 
-                System.out.println("Tipo: " + triangulo.getTipo());
-                
                 switch (triangulo.getTipo()) {
                     case "Triángulo Equilátero.":
                         c_equilatero++;
@@ -96,6 +115,9 @@ public class Main {
             }
 
             if (opcion == 2) {
+                System.out.println("\n======================");
+                System.out.println("INGRESO DE COORDENADAS");
+                System.out.println("======================");
                 System.out.print("Ingrese coordenadas para A: ");
                 String coordA = input.nextLine();
                 String[] splitA = coordA.split(",");
@@ -121,17 +143,19 @@ public class Main {
                 int dY = Integer.parseInt(splitD[1]);
 
                 cuatroPuntos cuadrilatero = new cuatroPuntos(aX, aY, bX, bY, cX, cY, dX, dY);
-                
+                System.out.println("\nFigura ingresada: " + cuadrilatero.getTipo());
+
                 c_cuadrilateros++;
 
+                System.out.println("\n======================");
+                System.out.println("MÓDULO DE LOS VECTORES");
+                System.out.println("======================");
                 System.out.println("Módulo AB: " + cuadrilatero.moduloAB());
                 System.out.println("Módulo BC: " + cuadrilatero.moduloBC());
                 System.out.println("Módulo CD: " + cuadrilatero.moduloCD());
                 System.out.println("Módulo DA: " + cuadrilatero.moduloDA());
 
-                System.out.println("Tipo: " + cuadrilatero.getTipo());
-                
-                switch(cuadrilatero.getTipo()) {
+                switch (cuadrilatero.getTipo()) {
                     case "Cuadrado":
                         c_cuadrado++;
                         break;
@@ -151,7 +175,7 @@ public class Main {
                         c_trapezoide++;
                         break;
                 }
-               /* esta es el area del trapesoide
+                /* esta es el area del trapesoide
         
         int SemiArea=0;
         int h=0;// usuario define altura
@@ -180,18 +204,25 @@ public class Main {
                  */
 
             }
-            System.out.print("Desea continuar [1.si / 2.no]: ");
+            System.out.print("\n¿Desea continuar? (S o N): ");
 
-            int opc = Integer.parseInt(input.nextLine());
+            String opc = input.nextLine();
 
-            if (opc == 2) {
-                System.out.println("Figuras ingresadas:");
-                System.out.println("Total: " + cantFiguras);
+            if (opc.equalsIgnoreCase("n")) {
+                System.out.println("\n==================");
+                System.out.println("FIGURAS INGRESADAS");
+                System.out.println("==================");
+                System.out.println("------------------------------------------"
+                        + "-");
                 System.out.println("Total Triángulos: " + c_triangulo);
                 System.out.println("Equiláteros: " + c_equilatero);
                 System.out.println("Isósceles: " + c_isosceles);
-                System.out.println("Escalenos: " + c_escaleno + "\n");
-                
+                System.out.println("Escalenos: " + c_escaleno);
+                System.out.println("------------------------------------------"
+                        + "-");
+
+                System.out.println("------------------------------------------"
+                        + "-");
                 System.out.println("Total Cuadriláteros: " + c_cuadrilateros);
                 System.out.println("Cuadrados: " + c_cuadrado);
                 System.out.println("Rombos: " + c_rombo);
@@ -199,6 +230,14 @@ public class Main {
                 System.out.println("Romboides: " + c_romboide);
                 System.out.println("Trapecios: " + c_trapecio);
                 System.out.println("Trapezoides: " + c_trapezoide);
+                System.out.println("------------------------------------------"
+                        + "-");
+                System.out.println("=========================================="
+                        + "=");
+                System.out.println("Total de figuras ingresadas: " + 
+                        cantFiguras);
+                System.out.println("=========================================="
+                        + "=");
                 break;
             }
         }
