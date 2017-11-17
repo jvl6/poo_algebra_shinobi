@@ -100,6 +100,7 @@ public class Trapezoide {
     int areaT=0;
     int area1=0;
     int area2=0;
+    int perimetro=0;
     System.out.println("calcular area");
     db1= b1 / 2;
     hA1= db1 - lado1;
@@ -110,5 +111,6 @@ public class Trapezoide {
     h2=Math.sqrt(HA2);
     area2=(h1 + b1)/2;
     areaT= area 1 + area 2;
+    perimetro= b1 + b2 + lado1 +lado2;
     */
 }
