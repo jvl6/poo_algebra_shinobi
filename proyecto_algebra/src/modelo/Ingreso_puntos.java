@@ -113,11 +113,11 @@ public class Ingreso_puntos extends javax.swing.JFrame {
     }//GEN-LAST:event_salirActionPerformed
 
     private void continuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continuarActionPerformed
-         if(opcion.getSelectedIndex()== 3){
+         if(opcion.getItemCount()== 3){
             pedir_3P p3p = new pedir_3P();
             p3p.setVisible(true);
             p3p.setTitle("Ingrese Triangulo");
-        }else if(opcion.getSelectedIndex() == 4){
+        }else if(opcion.getItemCount() == 4){
             pedir_4P p4p = new pedir_4P();
             p4p.setVisible(true);
             p4p.setTitle("Ingrese Cuadrilatero");
