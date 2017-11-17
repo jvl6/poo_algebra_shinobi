@@ -11,10 +11,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-//        Ingreso_puntos ventana = new Ingreso_puntos();
-//        
-//        ventana.setTitle("calculo de areas y perimetros");
-//        ventana.setVisible(true);
+        Ingreso_puntos ventana = new Ingreso_puntos();
+        
+        ventana.setTitle("calculo de areas y perimetros");
+        ventana.setVisible(true);
+        
         int cantFiguras = 0;
         int c_triangulo = 0;
         int c_equilatero = 0;
@@ -152,14 +153,14 @@ public class Main {
                     case "Romboide":
                         c_romboide++;
                         break;
-                    case "Trapecio":
-                        c_trapecio++;
-                        Trapecio trapecio = new Trapecio();
-                        break;
-                    case "Trapezoide":
-                        c_trapezoide++;
-                        Trapezoide trapezoide = new Trapezoide();
-                        break;
+//                    case "Trapecio":
+//                        c_trapecio++;
+//                        Trapecio trapecio = new Trapecio();
+//                        break;
+//                    case "Trapezoide":
+//                        c_trapezoide++;
+//                        Trapezoide trapezoide = new Trapezoide();
+//                        break;
                 }
                
                 /* esta es el area del trapecio
