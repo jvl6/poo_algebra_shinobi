@@ -57,44 +57,44 @@ public class cuatroPuntos {
                 + (Math.pow((getBY() - getAY()), 2))));
     }
 
-    public double moduloBC() {
-        return Math.sqrt(((Math.pow((getCX() - getBX()), 2))
-                + (Math.pow((getCY() - getBY()), 2))));
+    public double moduloBD() {
+        return Math.sqrt((Math.pow((getDX() - getBX()), 2))
+                + (Math.pow((getDY() - getBY()), 2)));
     }
 
-    public double moduloCD() {
-        return Math.sqrt(((Math.pow((getDX() - getCX()), 2))
-                + (Math.pow((getDY() - getCY()), 2))));
+    public double moduloDC() {
+        return Math.sqrt((Math.pow((getCX() - getDX()), 2))
+                + (Math.pow((getCY() - getDY()), 2)));
     }
 
-    public double moduloDA() {
-        return Math.sqrt(((Math.pow((getAX() - getDX()), 2))
-                + (Math.pow((getAY() - getDY()), 2))));
+    public double moduloCA() {
+        return Math.sqrt((Math.pow((getAX() - getCX()), 2))
+                + (Math.pow((getAY() - getCY()), 2)));
     }
 
     public String getTipo() {
-        if (moduloAB() == moduloCD() && moduloBC() == moduloDA()) {
+        if (moduloAB() == moduloBD() && moduloDC() == moduloCA()) {
             if (getAX() == getCX() && getAY() == getCY()) {
                 this.tipo = "Cuadrado";
-               
+
             } else {
                 this.tipo = "Rombo";
-               
+
             }
-        } else if ((moduloAB() == moduloCD()) && (moduloAB() != moduloBC()) && (moduloBC() == moduloDA())) {
+        } else if ((moduloAB() == moduloDC()) && (moduloCA() == moduloBD())) {
             if (getAX() == getCX() && getAY() == getCY()) {
                 this.tipo = "rectangulo";
-                
+
             } else {
                 this.tipo = "Romboide";
-               
+
             }
-        } else if (moduloAB() == moduloCD() && moduloBC() != moduloDA()) {
+        } else if (moduloCA() == moduloBD() && moduloAB() != moduloDC()) {
             this.tipo = "Trapecio";
-          
+
         } else {
             this.tipo = "Trapezoide";
-            
+
         }
 
         return this.tipo;

@@ -2,16 +2,18 @@ package modelo;
 
 import java.awt.Point;
 
-public class trapezoide {
+public class Trapezoide {
+
     private Point a;
     private Point b;
     private Point c;
     private Point d;
     private String Trapecio;
-    
-    public trapezoide(){
+
+    public Trapezoide() {
     }
-     public trapezoide(int a, int b, int c, int d, int e, int f, int g, int h) {
+
+    public Trapezoide(int a, int b, int c, int d, int e, int f, int g, int h) {
         this.a = new Point(a, b);
         this.b = new Point(c, d);
         this.c = new Point(e, f);
@@ -49,13 +51,34 @@ public class trapezoide {
     public double getDY() {
         return d.getY();
     }
-    
-    public void setArea(){
-        
+
+    public void setArea() {
+
     }
-     public double moduloAB() {
+
+    public double moduloAB() {
         return Math.sqrt(((Math.pow((getBX() - getAX()), 2))
                 + (Math.pow((getBY() - getAY()), 2))));
+    }
+
+    public double moduloBD() {
+        return Math.sqrt((Math.pow((getDX() - getBX()), 2))
+                + (Math.pow((getDY() - getBY()), 2)));
+    }
+
+    public double moduloDC() {
+        return Math.sqrt((Math.pow((getCX() - getDX()), 2))
+                + (Math.pow((getCY() - getDY()), 2)));
+    }
+
+    public double moduloCA() {
+        return Math.sqrt((Math.pow((getAX() - getCX()), 2))
+                + (Math.pow((getAY() - getCY()), 2)));
+    }
+
+    public double moduloDA() {
+        return Math.sqrt(((Math.pow((getAX() - getDX()), 2))
+                + (Math.pow((getAY() - getDY()), 2))));
     }
 
     public double moduloBC() {
@@ -63,16 +86,4 @@ public class trapezoide {
                 + (Math.pow((getCY() - getBY()), 2))));
     }
 
-    public double moduloCD() {
-        return Math.sqrt(((Math.pow((getDX() - getCX()), 2))
-                + (Math.pow((getDY() - getCY()), 2))));
-    }
-
-    public double moduloDA() {
-        return Math.sqrt(((Math.pow((getAX() - getDX()), 2))
-                + (Math.pow((getAY() - getDY()), 2))));
-    }
-    
-   
 }
-

@@ -151,9 +151,9 @@ public class Main {
                 System.out.println("MÓDULO DE LOS VECTORES");
                 System.out.println("======================");
                 System.out.println("Módulo AB: " + cuadrilatero.moduloAB());
-                System.out.println("Módulo BC: " + cuadrilatero.moduloBC());
-                System.out.println("Módulo CD: " + cuadrilatero.moduloCD());
-                System.out.println("Módulo DA: " + cuadrilatero.moduloDA());
+                System.out.println("Módulo BD: " + cuadrilatero.moduloBD());
+                System.out.println("Módulo DC: " + cuadrilatero.moduloDC());
+                System.out.println("Módulo CA: " + cuadrilatero.moduloCA());
 
                 switch (cuadrilatero.getTipo()) {
                     case "Cuadrado":
@@ -170,9 +170,11 @@ public class Main {
                         break;
                     case "Trapecio":
                         c_trapecio++;
+                        Trapecio trapecio = new Trapecio();
                         break;
                     case "Trapezoide":
                         c_trapezoide++;
+                        Trapezoide trapezoide = new Trapezoide();
                         break;
                 }
                 /* esta es el area del trapesoide
