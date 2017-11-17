@@ -86,4 +86,32 @@ public class Trapezoide {
                 + (Math.pow((getDY() - getBY()), 2))));
     }
 
+    /*
+    int b1=0;
+    int b2=0;
+    int db1=0;
+    int db2=0;
+    int hA1=0;
+    int hA2=0;
+    double h1=0;
+    double h2=0;
+    int lado1=0;
+    int lado2=0;
+    int lado3=0;
+    int areaT=0;
+    int area1=0;
+    int area2=0;
+    int perimetro=0;
+    System.out.println("calcular area");
+    db1= b1 / 2;
+    hA1= db1 - lado1;
+    h1=Math.sqrt(HA);
+    area1= (h1 + b1)/2
+    db2= b2 / 2;
+    HA2= db2 - lado2;
+    h2=Math.sqrt(HA2);
+    area2=(h1 + b1)/2;
+    areaT= area 1 + area 2;
+    perimetro= b1 + lado3 + lado1 +lado2;
+    */
 }
