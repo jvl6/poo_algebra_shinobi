@@ -57,28 +57,20 @@ public class tresPuntos {
     }
 
     public double moduloAC() {
-        return Math.sqrt(((Math.pow((getCX() - getAX()), 2))
-                + (Math.pow((getCY() - getAY()), 2))));
+        return Math.sqrt((Math.pow((getCX() - getAX()), 2)) 
+                + (getCY() - getAY()));
     }
-    
-    public double getArea(int opcion, double h) {
-        double modulo = 0;
-        
-        if (opcion == 1) {
-            modulo = moduloAB();
-        } else if (opcion == 2){
-            modulo = moduloBC();
-        } else if (opcion == 3) {
-            modulo = moduloAC();
-        }
-        
-        return h + modulo / 2;
+
+    public double getArea() {
+        double semiPerimetro = (moduloAB() + moduloBC() + moduloAC()) / 2;
+        return Math.sqrt(semiPerimetro * (semiPerimetro - moduloAB())
+                * (semiPerimetro - moduloBC()) * (semiPerimetro - moduloAC()));
     }
-    
+
     public String getTipo() {
-        if(moduloAB() == moduloBC() && moduloBC() == moduloAC()) {
+        if (moduloAB() == moduloBC() && moduloBC() == moduloAC()) {
             this.tipo = "Triángulo Equilátero.";
-        } else if(moduloAB() == moduloBC() || moduloBC() == moduloAC()){
+        } else if (moduloAB() == moduloBC() || moduloBC() == moduloAC()) {
             this.tipo = "Triángulo Isósceles.";
         } else {
             this.tipo = "Triángulo Escaleno.";

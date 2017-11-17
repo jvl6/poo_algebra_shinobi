@@ -61,19 +61,14 @@ public class Trapezoide {
                 + (Math.pow((getBY() - getAY()), 2))));
     }
 
-    public double moduloBD() {
-        return Math.sqrt((Math.pow((getDX() - getBX()), 2))
-                + (Math.pow((getDY() - getBY()), 2)));
+    public double moduloBC() {
+        return Math.sqrt((Math.pow((getCX() - getBX()), 2))
+                + (Math.pow((getCY() - getBY()), 2)));
     }
 
-    public double moduloDC() {
-        return Math.sqrt((Math.pow((getCX() - getDX()), 2))
-                + (Math.pow((getCY() - getDY()), 2)));
-    }
-
-    public double moduloCA() {
-        return Math.sqrt((Math.pow((getAX() - getCX()), 2))
-                + (Math.pow((getAY() - getCY()), 2)));
+    public double moduloCD() {
+        return Math.sqrt((Math.pow((getDX() - getCX()), 2))
+                + (Math.pow((getDY() - getCY()), 2)));
     }
 
     public double moduloDA() {
@@ -81,9 +76,14 @@ public class Trapezoide {
                 + (Math.pow((getAY() - getDY()), 2))));
     }
 
-    public double moduloBC() {
-        return Math.sqrt(((Math.pow((getCX() - getBX()), 2))
-                + (Math.pow((getCY() - getBY()), 2))));
+    public double moduloCA() {
+        return Math.sqrt((Math.pow((getAX() - getCX()), 2))
+                + (Math.pow((getAY() - getCY()), 2)));
+    }
+
+    public double moduloBD() {
+        return Math.sqrt(((Math.pow((getDX() - getBX()), 2))
+                + (Math.pow((getDY() - getBY()), 2))));
     }
 
 }

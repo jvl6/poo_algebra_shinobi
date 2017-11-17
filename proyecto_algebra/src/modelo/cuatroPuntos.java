@@ -57,23 +57,23 @@ public class cuatroPuntos {
                 + (Math.pow((getBY() - getAY()), 2))));
     }
 
-    public double moduloBD() {
-        return Math.sqrt((Math.pow((getDX() - getBX()), 2))
-                + (Math.pow((getDY() - getBY()), 2)));
+    public double moduloBC() {
+        return Math.sqrt((Math.pow((getCX() - getBX()), 2)) 
+                + (Math.pow((getCY() - getBY()), 2)));
     }
 
-    public double moduloDC() {
-        return Math.sqrt((Math.pow((getCX() - getDX()), 2))
-                + (Math.pow((getCY() - getDY()), 2)));
+    public double moduloCD() {
+        return Math.sqrt((Math.pow((getDX() - getCX()), 2))
+                + (Math.pow((getDY() - getCY()), 2)));
     }
 
-    public double moduloCA() {
-        return Math.sqrt((Math.pow((getAX() - getCX()), 2))
-                + (Math.pow((getAY() - getCY()), 2)));
+    public double moduloDA() {
+        return Math.sqrt((Math.pow((getAX() - getDX()), 2))
+                + (Math.pow((getAY() - getDY()), 2)));
     }
 
     public String getTipo() {
-        if (moduloAB() == moduloBD() && moduloDC() == moduloCA()) {
+        if (moduloAB() == moduloBC() && moduloCD() == moduloDA()) {
             if (getAX() == getCX() && getAY() == getCY()) {
                 this.tipo = "Cuadrado";
 
@@ -81,7 +81,7 @@ public class cuatroPuntos {
                 this.tipo = "Rombo";
 
             }
-        } else if ((moduloAB() == moduloDC()) && (moduloCA() == moduloBD())) {
+        } else if ((moduloAB() == moduloCD()) && (moduloDA() == moduloBC())) {
             if (getAX() == getCX() && getAY() == getCY()) {
                 this.tipo = "rectangulo";
 
@@ -89,7 +89,7 @@ public class cuatroPuntos {
                 this.tipo = "Romboide";
 
             }
-        } else if (moduloCA() == moduloBD() && moduloAB() != moduloDC()) {
+        } else if (moduloDA() == moduloBC() && moduloAB() != moduloCD()) {
             this.tipo = "Trapecio";
 
         } else {

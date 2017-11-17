@@ -81,23 +81,7 @@ public class Main {
                 System.out.println("Módulo BC: " + triangulo.moduloBC());
                 System.out.println("Módulo AC: " + triangulo.moduloAC());
 
-                System.out.println("\n====================");
-                System.out.println("SELECCIÓN DE LA BASE");
-                System.out.println("====================");
-                System.out.println("1. Desde A hasta B (AB)");
-                System.out.println("2. Desde B hasta C (BC)");
-                System.out.println("3. Desde A hasta C (AC)");
-                System.out.print("Opción: ");
-                opcion = Integer.parseInt(input.nextLine());
-
-                System.out.println("\n======");
-                System.out.println("ALTURA");
-                System.out.println("======");
-                System.out.print("Ingrese la altura: ");
-                String altura = input.nextLine().replaceAll(",", ".");
-                double h = Double.parseDouble(altura);
-
-                System.out.println("Área: " + triangulo.getArea(opcion, h));
+                System.out.println("\nÁrea: " + triangulo.getArea());
 
                 switch (triangulo.getTipo()) {
                     case "Triángulo Equilátero.":
@@ -151,9 +135,9 @@ public class Main {
                 System.out.println("MÓDULO DE LOS VECTORES");
                 System.out.println("======================");
                 System.out.println("Módulo AB: " + cuadrilatero.moduloAB());
-                System.out.println("Módulo BD: " + cuadrilatero.moduloBD());
-                System.out.println("Módulo DC: " + cuadrilatero.moduloDC());
-                System.out.println("Módulo CA: " + cuadrilatero.moduloCA());
+                System.out.println("Módulo BC: " + cuadrilatero.moduloBC());
+                System.out.println("Módulo CD: " + cuadrilatero.moduloCD());
+                System.out.println("Módulo DA: " + cuadrilatero.moduloDA());
 
                 switch (cuadrilatero.getTipo()) {
                     case "Cuadrado":
