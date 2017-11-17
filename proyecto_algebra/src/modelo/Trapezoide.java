@@ -97,6 +97,7 @@ public class Trapezoide {
     double h2=0;
     int lado1=0;
     int lado2=0;
+    int lado3=0;
     int areaT=0;
     int area1=0;
     int area2=0;
@@ -111,6 +112,6 @@ public class Trapezoide {
     h2=Math.sqrt(HA2);
     area2=(h1 + b1)/2;
     areaT= area 1 + area 2;
-    perimetro= b1 + b2 + lado1 +lado2;
+    perimetro= b1 + lado3 + lado1 +lado2;
     */
 }
