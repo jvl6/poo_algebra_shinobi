@@ -12,10 +12,10 @@ public class Main {
     public static void main(String[] args) {
 
         Ingreso_puntos ventana = new Ingreso_puntos();
-        
+
         ventana.setTitle("calculo de areas y perimetros");
         ventana.setVisible(true);
-        
+
         int cantFiguras = 0;
         int c_triangulo = 0;
         int c_equilatero = 0;
@@ -40,37 +40,72 @@ public class Main {
         System.out.println(" - - - - - - - - - - - - - - - - - - - - - - ");
 
         Scanner input = new Scanner(System.in);
+        boolean exit = false;
 
-        while (true) {
+        while (exit == false) {
             cantFiguras++;
 
             System.out.println("\nCantidad de puntos a ingresar: ");
             System.out.println("1. Tres.");
             System.out.println("2. Cuatro.");
             System.out.print("Opción: ");
-            int opcion = Integer.parseInt(input.nextLine());
+            int opcion = 0;
+            try {
+                opcion = Integer.parseInt(input.nextLine());
+            } catch (Exception e) {
+                System.out.println("Ingrese un número.");
+                continue;
+            }
 
             if (opcion == 1) {
                 System.out.println("\n======================");
                 System.out.println("INGRESO DE COORDENADAS");
                 System.out.println("======================");
-                System.out.print("Ingrese coordenadas para A: ");
-                String coordA = input.nextLine();
-                String[] splitA = coordA.split(",");
-                int aX = Integer.parseInt(splitA[0]);
-                int aY = Integer.parseInt(splitA[1]);
 
-                System.out.print("Ingrese coordenadas para B: ");
-                String coordB = input.nextLine();
-                String[] splitB = coordB.split(",");
-                int bX = Integer.parseInt(splitB[0]);
-                int bY = Integer.parseInt(splitB[1]);
+                int aX;
+                int aY;
+                while (true) {
+                    try {
+                        System.out.print("Ingrese coordenadas para A: ");
+                        String coordA = input.nextLine();
+                        String[] splitA = coordA.split(",");
+                        aX = Integer.parseInt(splitA[0]);
+                        aY = Integer.parseInt(splitA[1]);
+                        break;
+                    } catch (Exception e) {
+                        System.out.println("Coordenada/s inválida/s.");
+                    }
+                }
 
-                System.out.print("Ingrese coordenadas para C: ");
-                String coordC = input.nextLine();
-                String[] splitC = coordC.split(",");
-                int cX = Integer.parseInt(splitC[0]);
-                int cY = Integer.parseInt(splitC[1]);
+                int bX;
+                int bY;
+                while (true) {
+                    try {
+                        System.out.print("Ingrese coordenadas para B: ");
+                        String coordB = input.nextLine();
+                        String[] splitB = coordB.split(",");
+                        bX = Integer.parseInt(splitB[0]);
+                        bY = Integer.parseInt(splitB[1]);
+                        break;
+                    } catch (Exception e) {
+                        System.out.println("Coordenada/s inválida/s.");
+                    }
+                }
+
+                int cX;
+                int cY;
+                while (true) {
+                    try {
+                        System.out.print("Ingrese coordenadas para C: ");
+                        String coordC = input.nextLine();
+                        String[] splitC = coordC.split(",");
+                        cX = Integer.parseInt(splitC[0]);
+                        cY = Integer.parseInt(splitC[1]);
+                        break;
+                    } catch (Exception e) {
+                        System.out.println("Coordenada/s inválida/s.");
+                    }
+                }
 
                 tresPuntos triangulo = new tresPuntos(aX, aY, bX, bY, cX, cY);
                 System.out.println("\nFigura ingresada: " + triangulo.getTipo());
@@ -80,7 +115,7 @@ public class Main {
                 System.out.println("======================");
                 System.out.println("Módulo AB: " + triangulo.moduloAB());
                 System.out.println("Módulo BC: " + triangulo.moduloBC());
-                System.out.println("Módulo AC: " + triangulo.moduloAC());
+                System.out.println("Módulo AC: " + triangulo.moduloCA());
 
                 System.out.println("\nÁrea: " + triangulo.getArea());
 
@@ -103,29 +138,66 @@ public class Main {
                 System.out.println("\n======================");
                 System.out.println("INGRESO DE COORDENADAS");
                 System.out.println("======================");
-                System.out.print("Ingrese coordenadas para A: ");
-                String coordA = input.nextLine();
-                String[] splitA = coordA.split(",");
-                int aX = Integer.parseInt(splitA[0]);
-                int aY = Integer.parseInt(splitA[1]);
 
-                System.out.print("Ingrese coordenadas para B: ");
-                String coordB = input.nextLine();
-                String[] splitB = coordB.split(",");
-                int bX = Integer.parseInt(splitB[0]);
-                int bY = Integer.parseInt(splitB[1]);
+                int aX;
+                int aY;
+                while (true) {
+                    try {
+                        System.out.print("Ingrese coordenadas para A: ");
+                        String coordA = input.nextLine();
+                        String[] splitA = coordA.split(",");
+                        aX = Integer.parseInt(splitA[0]);
+                        aY = Integer.parseInt(splitA[1]);
+                        break;
+                    } catch (Exception e) {
+                        System.out.println("Coordenada/s inválida/s.");
+                    }
+                }
 
-                System.out.print("Ingrese coordenadas para C: ");
-                String coordC = input.nextLine();
-                String[] splitC = coordC.split(",");
-                int cX = Integer.parseInt(splitC[0]);
-                int cY = Integer.parseInt(splitC[1]);
+                int bX;
+                int bY;
+                while (true) {
+                    try {
+                        System.out.print("Ingrese coordenadas para B: ");
+                        String coordB = input.nextLine();
+                        String[] splitB = coordB.split(",");
+                        bX = Integer.parseInt(splitB[0]);
+                        bY = Integer.parseInt(splitB[1]);
+                        break;
+                    } catch (Exception e) {
+                        System.out.println("Coordenada/s inválida/s.");
+                    }
+                }
 
-                System.out.print("Ingrese coordenadas para D: ");
-                String coordD = input.nextLine();
-                String[] splitD = coordD.split(",");
-                int dX = Integer.parseInt(splitD[0]);
-                int dY = Integer.parseInt(splitD[1]);
+                int cX;
+                int cY;
+                while (true) {
+                    try {
+                        System.out.print("Ingrese coordenadas para C: ");
+                        String coordC = input.nextLine();
+                        String[] splitC = coordC.split(",");
+                        cX = Integer.parseInt(splitC[0]);
+                        cY = Integer.parseInt(splitC[1]);
+                        break;
+                    } catch (Exception e) {
+                        System.out.println("Coordenada/s inválida/s.");
+                    }
+                }
+
+                int dX;
+                int dY;
+                while (true) {
+                    try {
+                        System.out.print("Ingrese coordenadas para D: ");
+                        String coordD = input.nextLine();
+                        String[] splitD = coordD.split(",");
+                        dX = Integer.parseInt(splitD[0]);
+                        dY = Integer.parseInt(splitD[1]);
+                        break;
+                    } catch (Exception e) {
+                        System.out.println("Coordenada/s inválida/s.");
+                    }
+                }
 
                 cuatroPuntos cuadrilatero = new cuatroPuntos(aX, aY, bX, bY, cX, cY, dX, dY);
                 System.out.println("\nFigura ingresada: " + cuadrilatero.getTipo());
@@ -140,6 +212,8 @@ public class Main {
                 System.out.println("Módulo CD: " + cuadrilatero.moduloCD());
                 System.out.println("Módulo DA: " + cuadrilatero.moduloDA());
 
+                System.out.println("\nÁrea: " + cuadrilatero.getArea());
+
                 switch (cuadrilatero.getTipo()) {
                     case "Cuadrado":
                         c_cuadrado++;
@@ -153,16 +227,14 @@ public class Main {
                     case "Romboide":
                         c_romboide++;
                         break;
-//                    case "Trapecio":
-//                        c_trapecio++;
-//                        Trapecio trapecio = new Trapecio();
-//                        break;
-//                    case "Trapezoide":
-//                        c_trapezoide++;
-//                        Trapezoide trapezoide = new Trapezoide();
-//                        break;
+                    case "Trapecio":
+                        c_trapecio++;
+                        break;
+                    case "Trapezoide":
+                        c_trapezoide++;
+                        break;
                 }
-               
+
                 /* esta es el area del trapecio
         
         int SemiArea=0;
@@ -185,8 +257,6 @@ public class Main {
         perimetro = bMayor + bMenor + lado1 + lado2   
         ========================================================================
                  */
-
- 
                 // area de las figuras de cuatro lados por lo menos con un lado paralelo
                 /*
         int area=0;
@@ -198,43 +268,52 @@ public class Main {
         area = lado1 * lado2;
         perimetro= lado1 + lado2 + lado3 + lado4;
                  */
-
             }
-            System.out.print("\n¿Desea continuar? (S o N): ");
+            
+            boolean exit2 = false;
+            while (exit2 == false) {
+                System.out.print("\n¿Desea continuar? (S o N): ");
 
-            String opc = input.nextLine();
+                String opc = input.nextLine();
+                switch (opc.toLowerCase()) {
+                    case "n":
+                        System.out.println("\n==================");
+                        System.out.println("FIGURAS INGRESADAS");
+                        System.out.println("==================");
+                        System.out.println("------------------------------------------"
+                                + "-");
+                        System.out.println("Total Triángulos: " + c_triangulo);
+                        System.out.println("Equiláteros: " + c_equilatero);
+                        System.out.println("Isósceles: " + c_isosceles);
+                        System.out.println("Escalenos: " + c_escaleno);
+                        System.out.println("------------------------------------------"
+                                + "-");
 
-            if (opc.equalsIgnoreCase("n")) {
-                System.out.println("\n==================");
-                System.out.println("FIGURAS INGRESADAS");
-                System.out.println("==================");
-                System.out.println("------------------------------------------"
-                        + "-");
-                System.out.println("Total Triángulos: " + c_triangulo);
-                System.out.println("Equiláteros: " + c_equilatero);
-                System.out.println("Isósceles: " + c_isosceles);
-                System.out.println("Escalenos: " + c_escaleno);
-                System.out.println("------------------------------------------"
-                        + "-");
-
-                System.out.println("------------------------------------------"
-                        + "-");
-                System.out.println("Total Cuadriláteros: " + c_cuadrilateros);
-                System.out.println("Cuadrados: " + c_cuadrado);
-                System.out.println("Rombos: " + c_rombo);
-                System.out.println("Rectángulos: " + c_rectangulo);
-                System.out.println("Romboides: " + c_romboide);
-                System.out.println("Trapecios: " + c_trapecio);
-                System.out.println("Trapezoides: " + c_trapezoide);
-                System.out.println("------------------------------------------"
-                        + "-");
-                System.out.println("=========================================="
-                        + "=");
-                System.out.println("Total de figuras ingresadas: " + 
-                        cantFiguras);
-                System.out.println("=========================================="
-                        + "=");
-                break;
+                        System.out.println("------------------------------------------"
+                                + "-");
+                        System.out.println("Total Cuadriláteros: " + c_cuadrilateros);
+                        System.out.println("Cuadrados: " + c_cuadrado);
+                        System.out.println("Rombos: " + c_rombo);
+                        System.out.println("Rectángulos: " + c_rectangulo);
+                        System.out.println("Romboides: " + c_romboide);
+                        System.out.println("Trapecios: " + c_trapecio);
+                        System.out.println("Trapezoides: " + c_trapezoide);
+                        System.out.println("------------------------------------------"
+                                + "-");
+                        System.out.println("=========================================="
+                                + "=");
+                        System.out.println("Total de figuras ingresadas: "
+                                + cantFiguras);
+                        System.out.println("=========================================="
+                                + "=");
+                        exit = true;
+                        exit2 = true;
+                        break;
+                    case "s":
+                        exit2 = true;
+                    default:
+                        System.out.println("Ingrese [S] o [N].");
+                }
             }
         }
     }

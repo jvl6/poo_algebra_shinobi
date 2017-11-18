@@ -85,4 +85,5 @@ public class Trapecio {
         return Math.sqrt(((Math.pow((getDX() - getBX()), 2))
                 + (Math.pow((getDY() - getBY()), 2))));
     }
+    
 }

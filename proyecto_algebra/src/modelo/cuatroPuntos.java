@@ -58,7 +58,7 @@ public class cuatroPuntos {
     }
 
     public double moduloBC() {
-        return Math.sqrt((Math.pow((getCX() - getBX()), 2)) 
+        return Math.sqrt((Math.pow((getCX() - getBX()), 2))
                 + (Math.pow((getCY() - getBY()), 2)));
     }
 
@@ -99,5 +99,14 @@ public class cuatroPuntos {
 
         return this.tipo;
 
+    }
+    
+    private double getS() {
+        return (moduloAB() + moduloBC() + moduloCD() + moduloDA()) / 2;
+    }
+    
+    public double getArea() {
+        return Math.sqrt((getS() - moduloAB()) * (getS() - moduloBC()) * (getS()
+                - moduloCD()) * (getS() - moduloDA()));
     }
 }

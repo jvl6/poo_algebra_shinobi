@@ -12,6 +12,9 @@ public class tresPuntos {
     private Point b;
     private Point c;
     private String tipo;
+    private double pendienteAB;
+    private double pendienteBC;
+    private double pendienteCA;
 
     public tresPuntos() {
     }
@@ -56,21 +59,21 @@ public class tresPuntos {
                 + (Math.pow((getCY() - getBY()), 2))));
     }
 
-    public double moduloAC() {
-        return Math.sqrt((Math.pow((getCX() - getAX()), 2)) 
-                + (getCY() - getAY()));
+    public double moduloCA() {
+        return Math.sqrt((Math.pow((getAX() - getCX()), 2))
+                + (getAY() - getCY()));
     }
 
     public double getArea() {
-        double semiPerimetro = (moduloAB() + moduloBC() + moduloAC()) / 2;
-        return Math.sqrt(semiPerimetro * (semiPerimetro - moduloAB())
-                * (semiPerimetro - moduloBC()) * (semiPerimetro - moduloAC()));
+        double s = (moduloAB() + moduloBC() + moduloCA()) / 2;
+        return Math.sqrt(s * (s - moduloAB())
+                * (s - moduloBC()) * (s - moduloCA()));
     }
 
     public String getTipo() {
-        if (moduloAB() == moduloBC() && moduloBC() == moduloAC()) {
+        if (moduloAB() == moduloBC() && moduloBC() == moduloCA()) {
             this.tipo = "Triángulo Equilátero.";
-        } else if (moduloAB() == moduloBC() || moduloBC() == moduloAC()) {
+        } else if (moduloAB() == moduloBC() || moduloBC() == moduloCA()) {
             this.tipo = "Triángulo Isósceles.";
         } else {
             this.tipo = "Triángulo Escaleno.";
