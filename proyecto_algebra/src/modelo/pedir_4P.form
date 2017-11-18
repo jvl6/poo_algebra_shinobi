@@ -45,24 +45,37 @@
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="coord4" pref="104" max="32767" attributes="0"/>
-                                  <Component id="coord3" max="32767" attributes="0"/>
-                                  <Component id="coord2" max="32767" attributes="0"/>
+                                  <Component id="coord4X" pref="104" max="32767" attributes="0"/>
+                                  <Component id="coord3X" max="32767" attributes="0"/>
+                                  <Component id="coord2X" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="P1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
-                              <Component id="coord1" min="-2" pref="104" max="-2" attributes="0"/>
+                              <Component id="coord1X" min="-2" pref="104" max="-2" attributes="0"/>
                           </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="coord1Y" alignment="0" pref="104" max="32767" attributes="0"/>
+                          <Component id="coord2Y" alignment="0" max="32767" attributes="0"/>
+                          <Component id="coord3Y" alignment="0" max="32767" attributes="0"/>
+                          <Component id="coord4Y" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                       <Component id="cuatroP" min="-2" pref="206" max="-2" attributes="0"/>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="269" max="-2" attributes="0"/>
+                      <Component id="X2" min="-2" pref="26" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
+                      <Component id="Y2" min="-2" pref="15" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace pref="303" max="32767" attributes="0"/>
+              <EmptySpace pref="152" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -71,25 +84,36 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="cuatroP" min="-2" pref="39" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="X2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Y2" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="P1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="coord1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="coord1X" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="coord1Y" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="P2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="coord2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="coord2X" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="coord2Y" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="coord3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="coord3X" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="coord3Y" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <Component id="P3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="P4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="coord4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="coord4X" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="coord4Y" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="123" max="32767" attributes="0"/>
               <Component id="terminar" min="-2" max="-2" attributes="0"/>
@@ -124,17 +148,35 @@
         <Property name="text" type="java.lang.String" value="Punto D"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JFormattedTextField" name="coord1">
+    <Component class="javax.swing.JFormattedTextField" name="coord1X">
     </Component>
-    <Component class="javax.swing.JFormattedTextField" name="coord2">
+    <Component class="javax.swing.JFormattedTextField" name="coord2X">
     </Component>
-    <Component class="javax.swing.JFormattedTextField" name="coord3">
+    <Component class="javax.swing.JFormattedTextField" name="coord3X">
     </Component>
-    <Component class="javax.swing.JFormattedTextField" name="coord4">
+    <Component class="javax.swing.JFormattedTextField" name="coord4X">
     </Component>
     <Component class="javax.swing.JButton" name="terminar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Terminar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="coord1Y">
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="coord2Y">
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="coord3Y">
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="coord4Y">
+    </Component>
+    <Component class="javax.swing.JLabel" name="X2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="X"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Y2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Y"/>
       </Properties>
     </Component>
   </SubComponents>

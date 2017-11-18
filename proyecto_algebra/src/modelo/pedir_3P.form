@@ -87,25 +87,41 @@
               <Component id="aceptar" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
           </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="tresP" min="-2" pref="187" max="-2" attributes="0"/>
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="PC" min="-2" max="-2" attributes="0"/>
-                          <Component id="PB" min="-2" max="-2" attributes="0"/>
-                          <Component id="PA" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="PuntoA" pref="109" max="32767" attributes="0"/>
-                          <Component id="PuntoB" alignment="1" max="32767" attributes="0"/>
-                          <Component id="PuntoC" alignment="1" max="32767" attributes="0"/>
+                          <Component id="tresP" min="-2" pref="187" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="PC" min="-2" max="-2" attributes="0"/>
+                                  <Component id="PB" min="-2" max="-2" attributes="0"/>
+                                  <Component id="PA" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="AX" pref="109" max="32767" attributes="0"/>
+                                  <Component id="BX" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="CX" alignment="1" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="AY" alignment="0" pref="104" max="32767" attributes="0"/>
+                                  <Component id="BY" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="CY" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="231" max="-2" attributes="0"/>
+                      <Component id="X" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
+                      <Component id="Y" min="-2" pref="21" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace pref="281" max="32767" attributes="0"/>
+              <EmptySpace pref="146" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -114,20 +130,28 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               <Component id="tresP" min="-2" pref="32" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="X" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Y" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="PA" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="PuntoA" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="AX" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="AY" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="PB" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="PuntoB" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="BX" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="BY" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="PC" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="PuntoC" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="CX" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="CY" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="138" max="32767" attributes="0"/>
               <Component id="aceptar" min="-2" max="-2" attributes="0"/>
@@ -157,21 +181,37 @@
         <Property name="text" type="java.lang.String" value="Ingrese los puntos:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JFormattedTextField" name="PuntoA">
+    <Component class="javax.swing.JFormattedTextField" name="AX">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PuntoAActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AXActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JFormattedTextField" name="PuntoB">
+    <Component class="javax.swing.JFormattedTextField" name="BX">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PuntoBActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BXActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JFormattedTextField" name="PuntoC">
+    <Component class="javax.swing.JFormattedTextField" name="CX">
     </Component>
     <Component class="javax.swing.JButton" name="aceptar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Aceptar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="AY">
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="BY">
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="CY">
+    </Component>
+    <Component class="javax.swing.JLabel" name="X">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="X"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Y">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Y"/>
       </Properties>
     </Component>
   </SubComponents>

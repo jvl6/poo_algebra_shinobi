@@ -33,11 +33,17 @@ public class pedir_4P extends javax.swing.JFrame {
         P2 = new javax.swing.JLabel();
         P3 = new javax.swing.JLabel();
         P4 = new javax.swing.JLabel();
-        coord1 = new javax.swing.JFormattedTextField();
-        coord2 = new javax.swing.JFormattedTextField();
-        coord3 = new javax.swing.JFormattedTextField();
-        coord4 = new javax.swing.JFormattedTextField();
+        coord1X = new javax.swing.JFormattedTextField();
+        coord2X = new javax.swing.JFormattedTextField();
+        coord3X = new javax.swing.JFormattedTextField();
+        coord4X = new javax.swing.JFormattedTextField();
         terminar = new javax.swing.JButton();
+        coord1Y = new javax.swing.JFormattedTextField();
+        coord2Y = new javax.swing.JFormattedTextField();
+        coord3Y = new javax.swing.JFormattedTextField();
+        coord4Y = new javax.swing.JFormattedTextField();
+        X2 = new javax.swing.JLabel();
+        Y2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,6 +58,10 @@ public class pedir_4P extends javax.swing.JFrame {
         P4.setText("Punto D");
 
         terminar.setText("Terminar");
+
+        X2.setText("X");
+
+        Y2.setText("Y");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -73,39 +83,59 @@ public class pedir_4P extends javax.swing.JFrame {
                                     .addComponent(P3))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(coord4, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
-                                    .addComponent(coord3)
-                                    .addComponent(coord2)))
+                                    .addComponent(coord4X, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
+                                    .addComponent(coord3X)
+                                    .addComponent(coord2X)))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(P1)
                                 .addGap(139, 139, 139)
-                                .addComponent(coord1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(coord1X, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(47, 47, 47)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(coord1Y, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
+                            .addComponent(coord2Y)
+                            .addComponent(coord3Y)
+                            .addComponent(coord4Y)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(43, 43, 43)
-                        .addComponent(cuatroP, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(303, Short.MAX_VALUE))
+                        .addComponent(cuatroP, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(269, 269, 269)
+                        .addComponent(X2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(134, 134, 134)
+                        .addComponent(Y2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(152, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(cuatroP, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
+                .addGap(12, 12, 12)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(X2)
+                    .addComponent(Y2))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(P1)
-                    .addComponent(coord1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(coord1X, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(coord1Y, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(P2)
-                    .addComponent(coord2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(coord2X, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(coord2Y, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(coord3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(coord3X, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(coord3Y, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(P3))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(P4)
-                    .addComponent(coord4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(coord4X, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(coord4Y, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
                 .addComponent(terminar)
                 .addGap(49, 49, 49))
@@ -154,10 +184,16 @@ public class pedir_4P extends javax.swing.JFrame {
     private javax.swing.JLabel P2;
     private javax.swing.JLabel P3;
     private javax.swing.JLabel P4;
-    private javax.swing.JFormattedTextField coord1;
-    private javax.swing.JFormattedTextField coord2;
-    private javax.swing.JFormattedTextField coord3;
-    private javax.swing.JFormattedTextField coord4;
+    private javax.swing.JLabel X2;
+    private javax.swing.JLabel Y2;
+    private javax.swing.JFormattedTextField coord1X;
+    private javax.swing.JFormattedTextField coord1Y;
+    private javax.swing.JFormattedTextField coord2X;
+    private javax.swing.JFormattedTextField coord2Y;
+    private javax.swing.JFormattedTextField coord3X;
+    private javax.swing.JFormattedTextField coord3Y;
+    private javax.swing.JFormattedTextField coord4X;
+    private javax.swing.JFormattedTextField coord4Y;
     private javax.swing.JLabel cuatroP;
     private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JButton terminar;
