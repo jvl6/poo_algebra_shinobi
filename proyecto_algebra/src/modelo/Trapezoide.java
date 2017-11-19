@@ -9,6 +9,8 @@ public class Trapezoide {
     private Point c;
     private Point d;
     private String Trapecio;
+    private double bMayor;
+    private double bMenor;
 
     public Trapezoide() {
     }
@@ -87,8 +89,8 @@ public class Trapezoide {
     }
 
     /*
-    int b1=0;
-    int b2=0;
+    int bMayor=0;
+    int bMenor=0;
     int db1=0;
     int db2=0;
     int hA1=0;
@@ -113,5 +115,26 @@ public class Trapezoide {
     area2=(h1 + b1)/2;
     areaT= area 1 + area 2;
     perimetro= b1 + lado3 + lado1 +lado2;
-    */
+     */
+    public double getPerimetro() {
+        this.bMenor = Math.min(moduloAB(), Math.min(moduloBC(), 
+                Math.min(moduloCD(), moduloDA())));
+
+        this.bMayor = Math.max(moduloAB(), Math.min(moduloBC(), 
+                Math.min(moduloCD(), moduloDA())));
+
+        return this.bMayor + moduloCD() + moduloAB() + moduloBC();
+    }
+    
+    public double getArea() {
+        double dbUno = bMenor / 2;
+        double hUno = Math.sqrt(dbUno + moduloAB());
+        double areaUno = (hUno + bMenor) / 2;
+        
+        double dbDos = bMayor / 2;
+        double hDos = Math.sqrt(dbDos + moduloBC());
+        double areaDos = (hDos + bMayor) / 2;
+        
+        return areaUno + areaDos;
+    }
 }

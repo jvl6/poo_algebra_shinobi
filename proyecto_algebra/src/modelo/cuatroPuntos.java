@@ -101,12 +101,7 @@ public class cuatroPuntos {
 
     }
     
-    private double getS() {
-        return (moduloAB() + moduloBC() + moduloCD() + moduloDA()) / 2;
-    }
-    
     public double getArea() {
-        return Math.sqrt((getS() - moduloAB()) * (getS() - moduloBC()) * (getS()
-                - moduloCD()) * (getS() - moduloDA()));
+        return moduloAB() * moduloBC();
     }
 }

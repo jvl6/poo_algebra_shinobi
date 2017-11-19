@@ -212,26 +212,39 @@ public class Main {
                 System.out.println("Módulo CD: " + cuadrilatero.moduloCD());
                 System.out.println("Módulo DA: " + cuadrilatero.moduloDA());
 
-                System.out.println("\nÁrea: " + cuadrilatero.getArea());
-
                 switch (cuadrilatero.getTipo()) {
                     case "Cuadrado":
                         c_cuadrado++;
+                        System.out.println("\nÁrea: " + cuadrilatero.getArea());
                         break;
                     case "Rombo":
                         c_rombo++;
+                        System.out.println("\nÁrea: " + cuadrilatero.getArea());
                         break;
                     case "rectangulo":
                         c_rectangulo++;
+                        System.out.println("\nÁrea: " + cuadrilatero.getArea());
                         break;
                     case "Romboide":
                         c_romboide++;
+                        System.out.println("\nÁrea: " + cuadrilatero.getArea());
                         break;
                     case "Trapecio":
                         c_trapecio++;
+                        Trapecio trapecio = new Trapecio(aX, aY, bX, bY, cX, cY, 
+                                dX, dY);
+                        System.out.println("\nPerímetro: " + 
+                                trapecio.getPerimetro());
+                        System.out.println("\nÁrea: " + 
+                                trapecio.getArea());
                         break;
                     case "Trapezoide":
                         c_trapezoide++;
+                        Trapezoide trapezoide = new Trapezoide(aX, aY, bX, bY, 
+                                cX, cY, dX, dY);
+                        System.out.println("\nPerímetro: " + 
+                                trapezoide.getPerimetro());
+                        System.out.println("\nÁrea: " + trapezoide.getArea());
                         break;
                 }
 
@@ -254,7 +267,7 @@ public class Main {
         h= ht;
         SemiArea = ((bMayor + bMenor)/2 * (h))  ;
         area = SemiArea + (h * 2) ;
-        perimetro = bMayor + bMenor + lado1 + lado2   
+        perimetro = bMayor + bMenor + lado1 + lado2
         ========================================================================
                  */
                 // area de las figuras de cuatro lados por lo menos con un lado paralelo
@@ -269,7 +282,7 @@ public class Main {
         perimetro= lado1 + lado2 + lado3 + lado4;
                  */
             }
-            
+
             boolean exit2 = false;
             while (exit2 == false) {
                 System.out.print("\n¿Desea continuar? (S o N): ");

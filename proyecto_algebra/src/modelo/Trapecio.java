@@ -9,6 +9,8 @@ public class Trapecio {
     private Point c;
     private Point d;
     private String Trapecio;
+    private double bMayor;
+    private double bMenor;
 
     public Trapecio() {
     }
@@ -85,5 +87,22 @@ public class Trapecio {
         return Math.sqrt(((Math.pow((getDX() - getBX()), 2))
                 + (Math.pow((getDY() - getBY()), 2))));
     }
-    
+
+    public double getPerimetro() {
+        this.bMenor = Math.min(moduloAB(), Math.min(moduloBC(), 
+                Math.min(moduloCD(), moduloDA())));
+
+        this.bMayor = Math.max(moduloAB(), Math.min(moduloBC(), 
+                Math.min(moduloCD(), moduloDA())));
+
+        return this.bMayor + this.bMenor + moduloAB() + moduloBC();
+    }
+
+    public double getArea() {
+        double h = Math.sqrt((this.bMenor + this.bMayor) / 2);
+
+        double semiArea = ((this.bMayor + this.bMenor) / 2) * h;
+
+        return semiArea + (h * 2);
+    }
 }

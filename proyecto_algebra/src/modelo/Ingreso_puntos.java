@@ -52,7 +52,12 @@ public class Ingreso_puntos extends javax.swing.JFrame {
 
         text1.setText("Cantidad de puntos a ingresar:");
 
-        opcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "3", "4" }));
+        opcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "3", "4" }));
+        opcion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                opcionActionPerformed(evt);
+            }
+        });
 
         salir.setText("Salir");
         salir.addActionListener(new java.awt.event.ActionListener() {
@@ -113,11 +118,11 @@ public class Ingreso_puntos extends javax.swing.JFrame {
     }//GEN-LAST:event_salirActionPerformed
 
     private void continuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continuarActionPerformed
-         if(opcion.getItemCount()== 3){
+         if(opcion.getSelectedItem() == "3"){
             pedir_3P p3p = new pedir_3P();
             p3p.setVisible(true);
             p3p.setTitle("Ingrese Triangulo");
-        }else if(opcion.getItemCount() == 4){
+        }else if(opcion.getSelectedItem() == "4"){
             pedir_4P p4p = new pedir_4P();
             p4p.setVisible(true);
             p4p.setTitle("Ingrese Cuadrilatero");
@@ -127,6 +132,10 @@ public class Ingreso_puntos extends javax.swing.JFrame {
     private void continuarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_continuarMouseClicked
        
     }//GEN-LAST:event_continuarMouseClicked
+
+    private void opcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_opcionActionPerformed
 
  
 
